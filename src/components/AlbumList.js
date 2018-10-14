@@ -15,13 +15,15 @@ class AlbumList extends Component {
       );
   }
 
+  renderAlbums() {
+    return this.state.albums.map(album => (
+      <Text key={album.title}>{album.title}</Text>
+    ));
+  }
+
   render() {
     console.log(this.state);
-    return (
-      <View>
-        <Text>AlbumList</Text>
-      </View>
-    );
+    return <View>{this.renderAlbums()}</View>;
   }
 }
 
